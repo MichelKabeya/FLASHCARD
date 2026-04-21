@@ -36,9 +36,12 @@ class Card : AppCompatActivity() {
                 Toast.LENGTH_LONG).show()
 
         }
+        //created a variable that holds ths score button
         val score = findViewById<Button>(R.id.scoreBtn)
+        // made the score button invisible until all question are answered
         score.visibility = View.GONE
         score.setOnClickListener {
+            // variable that holds the intent for the  class Score
             val intent= Intent(this, Score::class.java)
             startActivity(intent)
         }

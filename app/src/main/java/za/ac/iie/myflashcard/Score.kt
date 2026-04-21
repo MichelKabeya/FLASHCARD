@@ -11,7 +11,8 @@ class Score : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_score)
-
+// added a background image for the Score_activity
+// from: https://i.pinimg.com/736x/ab/ae/68/abae68f2e0e757634db7d9c414efbd9f.jpg
 
 
 
