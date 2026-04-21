@@ -8,18 +8,6 @@
     android:background="@drawable/download__3_"
     tools:context=".Card">
 
-    <TextView
-        android:id="@+id/myth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/aldrich"
-        android:text="MYTH"
-        android:textColor="#FAF6F6"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="649dp" />
-
     <Button
         android:id="@+id/helpBtn"
         android:layout_width="56dp"
@@ -53,6 +41,8 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="172dp"
         android:layout_marginEnd="200dp"
+        android:fontFamily="@font/aldrich"
+        android:textColor="#FBFBFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,8 +52,8 @@
         android:id="@+id/hackBtn"
         android:layout_width="83dp"
         android:layout_height="86dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="156dp"
         android:backgroundTint="#0AC111"
         android:text="O"
         android:textAlignment="center"
@@ -76,8 +66,8 @@
         android:id="@+id/mythBtn"
         android:layout_width="83dp"
         android:layout_height="86dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="156dp"
         android:backgroundTint="#F00C1C"
         android:text="X"
         android:textAlignment="center"
@@ -85,5 +75,46 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/myth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/aldrich"
+        android:text="MYTH"
+        android:textColor="#FAF6F6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mythBtn" />
+
+    <TextView
+        android:id="@+id/hack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="76dp"
+        android:fontFamily="@font/aldrich"
+        android:text="HACK"
+        android:textColor="#FAF6F6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hackBtn" />
+
+    <Button
+        android:id="@+id/scoreBtn"
+        android:layout_width="127dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="39dp"
+        android:backgroundTint="#17B4FB"
+        android:fontFamily="@font/aldrich"
+        android:text="score"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

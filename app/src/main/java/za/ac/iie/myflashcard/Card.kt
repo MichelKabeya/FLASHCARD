@@ -1,6 +1,9 @@
 package za.ac.iie.myflashcard
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -9,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Card : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,8 +34,14 @@ class Card : AppCompatActivity() {
                         "\n" +
                         "Put your common sense to the test.",
                 Toast.LENGTH_LONG).show()
-        }
 
+        }
+        val score = findViewById<Button>(R.id.scoreBtn)
+        score.visibility = View.GONE
+        score.setOnClickListener {
+            val intent= Intent(this, Score::class.java)
+            startActivity(intent)
+        }
 
 
 
