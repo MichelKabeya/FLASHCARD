@@ -5,6 +5,85 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/download__3_"
     tools:context=".Card">
+
+    <TextView
+        android:id="@+id/myth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aldrich"
+        android:text="MYTH"
+        android:textColor="#FAF6F6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="649dp" />
+
+    <Button
+        android:id="@+id/helpBtn"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:drawable/ic_menu_help"
+        android:backgroundTint="#FDFBFB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="Help"
+        android:textColor="#FAF6F6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helpBtn" />
+
+    <TextView
+        android:id="@+id/cheertext"
+        android:layout_width="290dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hackBtn"
+        android:layout_width="83dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="188dp"
+        android:backgroundTint="#0AC111"
+        android:text="O"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/mythBtn"
+        android:layout_width="83dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="188dp"
+        android:backgroundTint="#F00C1C"
+        android:text="X"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

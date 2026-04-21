@@ -74,12 +74,12 @@
 
     <TextView
         android:id="@+id/promptText"
-        android:layout_width="348dp"
-        android:layout_height="94dp"
+        android:layout_width="338dp"
+        android:layout_height="172dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="116dp"
         android:fontFamily="@font/aldrich"
-        android:text="Wanna test your general knowledge of myths and truths  click GO and take the challenge"
+        android:text="Play a simple flashcard game where you decide: is it a real life hack or just a myth? Test your common sense, learn practical tips, and avoid misleading information—all in a fun and easy way."
         android:textAlignment="center"
         android:textColor="#F8F4F4"
         android:textSize="20sp"
