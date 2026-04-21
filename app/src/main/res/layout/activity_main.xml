@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mobile_wallpaper"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcometext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="WELCOME TO MYTHBREAKER"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <Button
+        android:id="@+id/infoBtn"
+        android:layout_width="53dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="21dp"
+        android:background="@android:drawable/ic_menu_info_details"
+        android:backgroundTint="#F6F3F3"
+        android:shadowColor="#F8F4F4"
+        android:textColor="#E6E4E4"
+        android:textColorHighlight="#F2EFEF"
+        android:textColorHint="#F6F3F3"
+        android:textColorLink="#F2F0F0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FBFAFA"
+        app:strokeColor="#F8F3F3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="Info"
+        android:textColor="#FAF6F6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
