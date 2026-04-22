@@ -41,7 +41,7 @@ class Card : AppCompatActivity() {
         //created a variable that holds ths score button
         val score = findViewById<Button>(R.id.scoreBtn)
         // made the score button invisible until all question are answered
-        score.visibility = View.GONE
+        score.visibility = View.INVISIBLE
         score.setOnClickListener {
             // variable that holds the intent for the  class Score
             val intent = Intent(this, Score::class.java)
@@ -78,24 +78,48 @@ class Card : AppCompatActivity() {
         // declaring HACK & MYTH buttons
         val pressHack = findViewById<Button>(R.id.hackBtn)
         val pressMyth = findViewById<Button>(R.id.mythBtn)
+        // created variables that will hold the scores
+        var scoreUp = 0
+        var scoreDown = 0
+        var scorefinal:Int
         // initializing the counter for the score
         var counter = 0
-        while (counter < 8)
-        // starting the quiz with the first statement
+        while (counter < 8) {
+            // setting the feedback textview to invisible
+            cheerNice.visibility = View.INVISIBLE
+            cheerBad.visibility = View.INVISIBLE
+            // starting the quiz with the first statement
             quizDisplay.text = cards[counter]
+            // added condition to the button HACK
             pressHack.setOnClickListener {
-                if (check[counter] != false)
-                   cheerBad.text = wrongChoice
-                else
-                   cheerNice.text = goodChoice
+                if (check[counter] == false) {
+                    scoreDown = scoreDown + 1
+                    cheerBad.visibility = View.VISIBLE
+                    cheerBad.text = wrongChoice
+                }
+                else {
+                    cheerNice.visibility = View.VISIBLE
+                    cheerNice.text = goodChoice
+                    scoreUp = scoreUp + 1
+                }
             }
+            // added condition to the button MYTH
             pressMyth.setOnClickListener {
-                if (check[counter] != true)
-                   cheerNice.text = goodChoice
-                else
-                   cheerBad.text = wrongChoice
-           }
-           counter = counter + 1 
+                if (check[counter] == true) {
+                    cheerNice.visibility = View.VISIBLE
+                    cheerNice.text = goodChoice
+                    scoreUp = scoreUp + 1
+                }
+                else {
+                    cheerBad.visibility = View.VISIBLE
+                    cheerBad.text = wrongChoice
+                    scoreDown = scoreDown + 1
+                }
+            }
+            counter = counter + 1
+
+        }
+
 
 
 
