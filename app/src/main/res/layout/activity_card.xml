@@ -35,16 +35,32 @@
         app:layout_constraintTop_toBottomOf="@+id/helpBtn" />
 
     <TextView
-        android:id="@+id/cheertext"
-        android:layout_width="290dp"
-        android:layout_height="29dp"
+        android:id="@+id/cheertext1"
+        android:layout_width="279dp"
+        android:layout_height="48dp"
         android:layout_marginStart="154dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="200dp"
         android:fontFamily="@font/aldrich"
-        android:textColor="#FBFBFB"
+        android:textColor="#42F407"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cheertext2"
+        android:layout_width="282dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/aldrich"
+        android:textColor="#F00808"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,8 +68,8 @@
         android:id="@+id/hackBtn"
         android:layout_width="83dp"
         android:layout_height="86dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="152dp"
         android:backgroundTint="#0AC111"
         android:text="O"
         android:textAlignment="center"
@@ -113,8 +129,38 @@
         android:backgroundTint="#17B4FB"
         android:fontFamily="@font/aldrich"
         android:text="score"
+        android:textColor="#070707"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/flashCard"
+        android:layout_width="346dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="360dp"
+        android:fontFamily="@font/aldrich"
+        android:textColor="#F8F5F5"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cheertext2" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginBottom="260dp"
+        android:backgroundTint="#17B4FB"
+        android:fontFamily="@font/aldrich"
+        android:text="Next"
+        android:textColor="#0F0E0E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

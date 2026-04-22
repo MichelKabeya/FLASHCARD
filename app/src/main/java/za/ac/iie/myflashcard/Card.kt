@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,7 @@ class Card : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_card)
 
-         // added a background image for activity_card
+        // added a background image for activity_card
         // from: https://i.pinimg.com/736x/0b/dd/1d/0bdd1d294cf71b2d2c745785bf2a899d.jpg
 
         // created a variable that holds the Help button
@@ -33,7 +34,8 @@ class Card : AppCompatActivity() {
                         "Tap \"O\" for Hack  \n" +
                         "\n" +
                         "Put your common sense to the test.",
-                Toast.LENGTH_LONG).show()
+                Toast.LENGTH_LONG
+            ).show()
 
         }
         //created a variable that holds ths score button
@@ -42,10 +44,58 @@ class Card : AppCompatActivity() {
         score.visibility = View.GONE
         score.setOnClickListener {
             // variable that holds the intent for the  class Score
-            val intent= Intent(this, Score::class.java)
+            val intent = Intent(this, Score::class.java)
             startActivity(intent)
         }
-
+        // created variable that holds the Nice & Bad textViews
+        val cheerNice = findViewById<TextView>(R.id.cheertext1)
+        val cheerBad = findViewById<TextView>(R.id.cheertext2)
+        val quizDisplay = findViewById<TextView>(R.id.flashCard)
+        val goodChoice: String = ("Correct! That's a real time-saver!")
+        val wrongChoice: String = ("Wrong! That's just an urban myth")
+        // created an array that holds all the statements
+        val cards = arrayOf<String>(
+            "Swallowed chewing gum stays in your stomach for 7 years",
+            "Eating carrots gives you night vision",
+            "Turning your pillow to the cold side improves sleep",
+            "If you drop food, the 3-second rule saves you",
+            "Sleeping with socks on helps you fall asleep faster",
+            "Putting your phone in airplane mode charges it faster",
+            "Turning it off and on again fixes many tech issues",
+            "You can wake up instantly by holding your breath"
+        )
+        // created array for answers based on booleans
+        val check = arrayOf(
+            false,
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+        )
+        // declaring HACK & MYTH buttons
+        val pressHack = findViewById<Button>(R.id.hackBtn)
+        val pressMyth = findViewById<Button>(R.id.mythBtn)
+        // initializing the counter for the score
+        var counter = 0
+        while (counter < 8)
+        // starting the quiz with the first statement
+            quizDisplay.text = cards[counter]
+            pressHack.setOnClickListener {
+                if (check[counter] != false)
+                   cheerBad.text = wrongChoice
+                else
+                   cheerNice.text = goodChoice
+            }
+            pressMyth.setOnClickListener {
+                if (check[counter] != true)
+                   cheerNice.text = goodChoice
+                else
+                   cheerBad.text = wrongChoice
+           }
+           counter = counter + 1 
 
 
 
